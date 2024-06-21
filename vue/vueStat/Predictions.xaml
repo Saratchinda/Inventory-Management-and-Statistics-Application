@@ -1,0 +1,95 @@
+﻿<Page x:Class="Log_in.vue.vueStat.Predictions"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Log_in.vue.vueStat"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Predictions">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Column="0">
+
+            <!-- Onglet Critères 1 -->
+            <TabItem >
+                <StackPanel>
+                    <GroupBox   Header="Achats/Ventes" HorizontalContentAlignment="Center" Height="33"/>
+                    <CheckBox x:Name="chkAchat" Content="Achat" HorizontalAlignment="Center" />
+                    <CheckBox x:Name="chkVente" Content="Vente" HorizontalAlignment="Center" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <!-- Colonne 2 : Onglet Critères 2 -->
+        <TabControl Grid.Column="1">
+            <TabItem  Width="188">
+                <StackPanel>
+                    <GroupBox   Header="Filtres" HorizontalContentAlignment="Center" Height="33"/>
+                    <StackPanel Height="136">
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Famille" Height="19" Width="176"/>
+                        <ComboBox x:Name="cbFamille" Width="172"/>
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Gamme" Height="19" Width="176"/>
+                        <ComboBox x:Name="cbGamme" Width="172"/>
+                        <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Emplacement" Height="19" Width="176"/>
+                        <ComboBox x:Name="cbEmplacement" Width="172"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <!-- Colonne 3 : Onglet Critères 3 -->
+        <TabControl Grid.Column="2">
+            <TabItem >
+                <StackPanel>
+                    <GroupBox   Header="Période" HorizontalContentAlignment="Center" Height="33"/>
+
+
+                    <!-- ComboBox pour la sélection du mois de début (visible si Mensuel est sélectionné) -->
+                    <GroupBox Header="Mois de début" Visibility="Collapsed" />
+                    <StackPanel>
+                        <TextBlock Text="Année de début"/>
+                        <ComboBox Name="cbAnne"></ComboBox>
+                    </StackPanel>
+                    <GroupBox Header="Mois de début" Visibility="Collapsed" />
+                    <StackPanel>
+                        <TextBlock Text="Année de fin"/>
+                        <TextBox x:Name="txtAnneeFin"></TextBox>
+                    </StackPanel>
+
+                    <!-- ComboBox pour la sélection du mois de fin (visible si Mensuel est sélectionné) -->
+                    <GroupBox Header="Mois de fin" Name="gbEndMonth" Visibility="Collapsed" />
+                    <StackPanel/>
+                </StackPanel>
+            </TabItem>
+
+        </TabControl>
+
+        <!-- Colonne 4 : Onglet Critères 4 -->
+        <TabControl Grid.Column="3">
+            <TabItem >
+                <StackPanel>
+                    <GroupBox   Header="Visualisation" HorizontalContentAlignment="Center" Height="33"/>
+                    <Label Content="Type de graph" />
+                    <ComboBox  Name="cbTypeGraph" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+       
+        <Button x:Name="btnCalculer" Grid.Column="3" Content="Calculer" HorizontalAlignment="Left" Margin="77,32,0,0" Grid.Row="2" VerticalAlignment="Top" Click="btnCalculer_Click"/>
+
+    </Grid>
+</Page>

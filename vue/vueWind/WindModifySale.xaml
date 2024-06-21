@@ -1,0 +1,36 @@
+﻿<Window x:Class="Log_in.vue.WindModifySale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Log_in.vue"
+        mc:Ignorable="d"
+        PreviewKeyDown="Window_PreviewKeyDown"
+        Title="WindModifySale" Height="450" Width="800">
+    <Canvas Loaded="Canvas_Loaded" Margin="0,0,0,4">
+        <TextBox x:Name="txtId" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Canvas.Left="314" Canvas.Top="115" PreviewTextInput="txtId_PreviewTextInput" />
+        <TextBox x:Name="txtDate" TextWrapping="Wrap" Text="" Width="120" Canvas.Left="317" Canvas.Top="193" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtQuantity" TextWrapping="Wrap" Text="" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="317" Canvas.Top="265" PreviewTextInput="txtQuantity_PreviewTextInput"/>
+
+
+        <Button Name="btnModifer" Content="Modifier" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnModifer_Click" Background="#FF814550" Foreground="#FFF6BFB9" Canvas.Left="658" Canvas.Top="239" IsDefault="True"  />
+
+        <Label Content="ID" Canvas.Left="241" Canvas.Top="121" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Label Content="Date" Canvas.Left="241" Canvas.Top="201" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Label Content="Quantity" Canvas.Left="241" Canvas.Top="274" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Border  Width="803" Height="54" Canvas.Top="-3" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Border.Background>
+                <LinearGradientBrush >
+                    <GradientStop Color="#FF814550" Offset="0"/>
+                    <GradientStop Color="#FFD2857C" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Label Content="DanceWaveTech" Margin="35,12,409,-12" FontFamily="Segoe UI Black" FontWeight="Bold" Foreground="#FFF6BFB9" FontSize="25"/>
+
+        </Border>
+        <Label Content="ID Article" Canvas.Left="241" Canvas.Top="353" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <ComboBox Canvas.Left="315" Name="cbIdArticle" Canvas.Top="345" Width="120" HorizontalAlignment="Left" SelectionChanged="txtIdArticle_SelectionChanged"/>
+
+    </Canvas>
+</Window>

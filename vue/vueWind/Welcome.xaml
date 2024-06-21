@@ -1,0 +1,158 @@
+﻿<Window x:Class="Log_in.vue.Welcome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Log_in.vue"
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        mc:Ignorable="d"
+        Title="Welcome" Height="800"
+Width="1300"
+WindowStartupLocation="CenterScreen"
+WindowStyle="ThreeDBorderWindow"
+
+Background="Transparent"
+ResizeMode="CanResize"
+FontSize="18"
+FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+
+
+        </Grid.ColumnDefinitions>
+        <!--Left Menu-->
+        <StackPanel></StackPanel>
+        <Border CornerRadius="10 0 0 10 ">
+
+
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#FF814550" Offset="0"/>
+                    <GradientStop Color="#FFD2857C" Offset="1"/>
+
+                </LinearGradientBrush >
+
+            </Border.Background>
+            <StackPanel>
+                <!--UserName-->
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 35 0 0">
+                    <StackPanel Margin="10 0 0 0" VerticalAlignment="Center"/>
+                </StackPanel>
+                <Separator Height="0.8" Margin="20 30 " Background="WhiteSmoke"/>
+                <!--Menu buttons-->
+                <Button  Style="{StaticResource menuButtonActive}" Name="Dashboard" Click="Dashboard_Click" Background="Transparent" BorderBrush="White" >
+                    <StackPanel Orientation="Horizontal" >
+                        <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Dashboard" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+
+                    </StackPanel>
+
+                </Button>
+
+
+
+                <Button Name="BtnItems"  Style="{StaticResource menuButton}" Click="BtnItems_Click" Background="Transparent" BorderBrush="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="ShoppingBag" Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Items" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+
+                    </StackPanel>
+
+                </Button>
+
+
+
+                <Button Name="BtnSales" Style="{StaticResource menuButton}" Click="BtnSales_Click" Background="Transparent" BorderBrush="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="BasketShopping" Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Sales" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+
+                    </StackPanel>
+
+                </Button>
+
+
+
+
+                <Button Name="BtnPurchases" Style="{StaticResource menuButton}" Click="BtnPurchases_Click" Background="Transparent" BorderBrush="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="CartShopping" Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Purchases" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+
+                    </StackPanel>
+
+                </Button>
+
+
+
+
+
+                <Button Name="BtnStats"  Style="{StaticResource menuButton}" Click="BtnStats_Click" Background="Transparent" BorderBrush="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="AreaChart"    Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Stat Critères" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+
+                    </StackPanel>
+
+                </Button>
+                <Button Name="Yearly"  Style="{StaticResource menuButton}"  Background="Transparent" BorderBrush="White" Click="Yearly_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="AreaChart"    Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Yearly" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                    </StackPanel>
+
+                </Button>
+                <Button Name="Monthly"  Style="{StaticResource menuButton}"  Background="Transparent" BorderBrush="White" Click="Monthly_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="AreaChart"    Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Monthly" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                    </StackPanel>
+
+                </Button>
+                <Button Name="Predictions"  Style="{StaticResource menuButton}"  Background="Transparent" BorderBrush="White" Click="Predictions_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="AreaChart"    Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Predictions" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Name="btnDaily"  Style="{StaticResource menuButton}"  Background="Transparent" BorderBrush="White" Click="btnDaily_Click"  >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="AreaChart"    Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Daily" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="Log_out" Style="{StaticResource menuButton}" Click="Log_out_Click" Background="Transparent" BorderBrush="White" >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:IconImage Icon="PowerOff" Style="{StaticResource menuButtonIcon}" Foreground="White"/>
+                        <TextBlock Text="Log out" Style="{StaticResource menuButtonText}" FontSize="16" FontWeight="Bold" Foreground="White"/>
+
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+
+        </Border>
+
+        <!--Main Section-->
+        <Grid Grid.Column="1" Background="White"  MouseDown="Border_MouseDown" >
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" RenderTransformOrigin="0.5,0.5" />
+           
+
+            <!-- Boutons de navigation -->
+
+
+        </Grid>
+
+
+
+
+
+    </Grid>
+</Window>

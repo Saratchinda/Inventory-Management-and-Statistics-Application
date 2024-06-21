@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log_in", "Log_in.csproj", "{B12CB4BE-4F9D-4A30-ACFC-480F68E4BB78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ECC87674-32D9-44DC-A94F-36D4A88A5888}"
+	ProjectSection(SolutionItems) = preProject
+		DALTests.cs = DALTests.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B12CB4BE-4F9D-4A30-ACFC-480F68E4BB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12CB4BE-4F9D-4A30-ACFC-480F68E4BB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12CB4BE-4F9D-4A30-ACFC-480F68E4BB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12CB4BE-4F9D-4A30-ACFC-480F68E4BB78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF824AB3-EFFD-40F7-8001-9E0C6BA48AE9}
+	EndGlobalSection
+EndGlobal

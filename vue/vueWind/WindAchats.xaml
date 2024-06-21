@@ -1,0 +1,44 @@
+﻿<Page x:Class="Log_in.vue.WindAchats"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Log_in.vue"
+    
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="WindAchats">
+
+    <Grid>
+        <Canvas>
+            <Border  Width="1003" HorizontalAlignment="Left" Height="65" VerticalAlignment="Center">
+                <Label Content="DanceWaveTech" Margin="35,12,409,-12" FontFamily="Segoe UI Black" FontWeight="Bold" Foreground="#FFF6BFB9" FontSize="25"/>
+                <Border.Background>
+                    <LinearGradientBrush >
+                        <GradientStop Color="#FF814550" Offset="0"/>
+                        <GradientStop Color="#FFD2857C" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+            </Border>
+            <Button x:Name="btnAddPurchase" Content="+ Add Purchases" Width="183" Height="30" Background="#FF814550" Foreground="#FFF6BFB9" Canvas.Left="784" Canvas.Top="82" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial Black" Click="btnAddPurchase_Click" />
+            <TextBox x:Name="txtFilter" Text="" Width="179" Height="24" Canvas.Left="788" Canvas.Top="146" HorizontalAlignment="Center" VerticalAlignment="Top" TextChanged="TextBox_TextChanged"/>
+            <ListView x:Name="lstAchat" d:ItemsSource="{d:SampleData ItemCount=5}" Height="297" Width="840" HorizontalAlignment="Left" Canvas.Top="237" VerticalAlignment="Center" Canvas.Left="37" SelectionChanged="lstAchat_SelectionChanged"  >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Id " Width="120" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="ID Article" Width="150" DisplayMemberBinding="{Binding IdArticle}" />
+                        <GridViewColumn Header="Date Purchase" Width="150" DisplayMemberBinding="{Binding DatePurchase}" />
+                        <GridViewColumn Header="Quantity " Width="120" DisplayMemberBinding="{Binding Quantity}" />
+                        <GridViewColumn Header="Total price" Width="160" DisplayMemberBinding="{Binding Totalprice}" />
+                        <GridViewColumn Header="Unit price" Width="160" DisplayMemberBinding="{Binding Unitprice}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Name="lblVoir" Content="" Canvas.Left="37" Canvas.Top="509" HorizontalAlignment="Left" VerticalAlignment="Center" Width="785" Height="176"/>
+            <Label Content="Purchases" FontSize="30" Foreground="#FF814550" FontFamily="Tw Cen MT Condensed Extra Bold" Height="47" Canvas.Left="63" Canvas.Top="93" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="btnModifyPurchase" Content="Modify" Width="120" Height="30" Background="#FF814550" Foreground="#FFF6BFB9" Canvas.Left="853" Canvas.Top="673" FontFamily="Arial Black"  HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnModifyPurchase_Click"  />
+            <Button x:Name="btnDeletePurchase" Content="Delete" Width="120" Height="30" Background="#FF814550" Foreground="#FFF6BFB9" Canvas.Left="853" Canvas.Top="714" FontFamily="Arial Black"  HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnDeletePurchase_Click"  />
+        </Canvas>
+    </Grid>
+</Page>

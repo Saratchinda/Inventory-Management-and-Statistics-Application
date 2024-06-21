@@ -1,0 +1,45 @@
+﻿<Window x:Class="Log_in.vue.WindModidyArticle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Log_in.vue"
+        mc:Ignorable="d"
+        PreviewKeyDown="Window_PreviewKeyDown"
+        Title="WindModidyArticle" Height="450" Width="800">
+    <Canvas Loaded="Canvas_Loaded" Margin="2,1,-2,-1">
+        <TextBox Name="txtId" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" Canvas.Left="280" Canvas.Top="63" PreviewTextInput="txtId_PreviewTextInput"/>
+        <TextBox Name="txtNom" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Canvas.Left="280" Canvas.Top="105" PreviewTextInput="txtNom_PreviewTextInput"/>
+        <TextBox x:Name="txtDescription" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Canvas.Left="280" Canvas.Top="156" PreviewTextInput="txtDescription_PreviewTextInput"/>
+        <TextBox x:Name="txtPrix" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Canvas.Left="280" Canvas.Top="206" PreviewTextInput="txtPrix_PreviewTextInput"/>
+
+        <Button Name="btnModifer" Content="Modifier" HorizontalAlignment="Center" VerticalAlignment="Top" Click="btnModifer_Click" Foreground="#FFF6BFB9" Background="#FF814550" Canvas.Left="662" Canvas.Top="214" IsDefault="True"/>
+
+        <Label Content="Nom" Canvas.Left="170" Canvas.Top="116" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Label Content="Description" Canvas.Left="170" Canvas.Top="162" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Label Content="Prix" Canvas.Left="170" Canvas.Top="214" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Label Content="Gamme" Canvas.Left="170" Canvas.Top="261" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Label Content="Famille" Canvas.Left="170" Canvas.Top="312" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Label Content="Fournisseur" Canvas.Left="170" Canvas.Top="359" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Label Content="Emplacement" Canvas.Left="170" Canvas.Top="403" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Label Content="ID" Canvas.Left="170" Canvas.Top="70" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+        <Border  Width="803" Height="54" Canvas.Top="-3" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="-2">
+            <Border.Background>
+                <LinearGradientBrush >
+                    <GradientStop Color="#FF814550" Offset="0"/>
+                    <GradientStop Color="#FFD2857C" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Label Content="DanceWaveTech" Margin="35,12,409,-12" FontFamily="Segoe UI Black" FontWeight="Bold" Foreground="#FFF6BFB9" FontSize="25"/>
+
+        </Border>
+        <TextBox x:Name="txtGamme" TextWrapping="Wrap" Text="" Width="120" Canvas.Left="280" Canvas.Top="250" PreviewTextInput="txtPrix_PreviewTextInput" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFamille" TextWrapping="Wrap" Text="" Width="120" Canvas.Left="280" Canvas.Top="301" PreviewTextInput="txtPrix_PreviewTextInput" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFournisseur" TextWrapping="Wrap" Text="" Width="120" Canvas.Left="280" Canvas.Top="348" PreviewTextInput="txtPrix_PreviewTextInput" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmplacement" TextWrapping="Wrap" Text="" Width="120" Canvas.Left="280" Canvas.Top="396" PreviewTextInput="txtPrix_PreviewTextInput" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+
+
+    </Canvas>
+</Window>

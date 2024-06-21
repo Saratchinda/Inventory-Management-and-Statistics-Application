@@ -1,0 +1,6 @@
+﻿ *_i.c
+ *_p.c *_i.h *.ilk *.meta *.obj *.pch *.pdb *.pgc *.pgd *.rsp *.sbr *.tlb *.tli *.tlh *.tmp *.tmp_proj *.log *.vspscc *.vssscc.builds *.pidb *.log *.svclog *.scc
+ .vs
+ ../.vs.vs.vscode.vscode/.vscode/*.vs/packages/package/Packagespackages.packages# User-specific files*.suo*.user*.sln.docstatesbin/
+obj/
+.vs/

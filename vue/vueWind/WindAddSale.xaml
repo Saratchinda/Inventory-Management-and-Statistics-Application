@@ -1,0 +1,32 @@
+﻿<Window x:Class="Log_in.vue.WindAddSale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Log_in.vue"
+        mc:Ignorable="d"
+        PreviewKeyDown="Window_PreviewKeyDown"
+        Title="WindAddSale" Height="450" Width="800">
+    <Grid>
+        <Canvas>
+            <DatePicker Name="dtPicker" HorizontalAlignment="Left" Canvas.Left="395" Canvas.Top="126"/>
+
+            <TextBox x:Name="txtQuantity" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Canvas.Left="299" Canvas.Top="177" PreviewTextInput="txtQuantity_PreviewTextInput"/>
+            <Button Name="btnAjouter" Content="Ajouter" HorizontalAlignment="Left" VerticalAlignment="Center" Click="btnAjouter_Click" BorderBrush="#FF009688" Foreground="#FFF6BFB9" Background="#FF814550" Canvas.Left="668" Canvas.Top="366" IsDefault="True" Cursor="Hand"/>
+            <Label Content="Quantity" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="211" Canvas.Top="184" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+            <Label Content="Id Article" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="211" Canvas.Top="265" FontFamily="Arial Rounded MT Bold" FontWeight="Bold"/>
+            <Border  Width="803" Height="54" Canvas.Top="-3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border.Background>
+                    <LinearGradientBrush >
+                        <GradientStop Color="#FF814550" Offset="0"/>
+                        <GradientStop Color="#FFD2857C" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Label Content="DanceWaveTech" Margin="35,12,409,-12" FontFamily="Segoe UI Black" FontWeight="Bold" Foreground="#FFF6BFB9" FontSize="25"/>
+
+            </Border>
+            <ComboBox Canvas.Left="296" Name="cbIdArticle" Canvas.Top="259" Width="120" HorizontalAlignment="Left"/>
+        </Canvas>
+    </Grid>
+</Window>

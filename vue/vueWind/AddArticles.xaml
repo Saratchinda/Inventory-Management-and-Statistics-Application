@@ -1,0 +1,59 @@
+﻿<Page x:Class="Log_in.vue.AddArticles"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Log_in.vue"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1000"
+      Title="AddArticles">
+
+    <Grid>
+        <Canvas>
+            <Border  Height="74" Width="1000" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Label Content="DanceWaveTech" Margin="35,12,409,-12" FontFamily="Segoe UI Black" FontWeight="Bold" Foreground="#FFF6BFB9" FontSize="25"/>
+                <Border.Background>
+                    <LinearGradientBrush >
+                        <GradientStop Color="#FF814550" Offset="0"/>
+                        <GradientStop Color="#FFD2857C" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+
+            </Border>
+            <Button Name="btnAddItems" Content="+ Add Items"  Width="183" Height="30" Background="#FF814550" Foreground="#FFF6BFB9" Canvas.Left="784" Canvas.Top="82" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial Black" Click="btnAddItems_Click" />
+            <Label Content="Items" FontSize="30" Foreground="#FF814550" FontFamily="Tw Cen MT Condensed Extra Bold" Height="47" Canvas.Left="63" Canvas.Top="93" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox Name="txtFilter" Text="" Width="179" Height="24" Canvas.Left="788" Canvas.Top="146" HorizontalAlignment="Center"  VerticalAlignment="Top" TextChanged="txtFilter_TextChanged"  />
+
+            <ListView Name="lstArticles" d:ItemsSource="{d:SampleData ItemCount=20}" Height="365" Width="919" Canvas.Top="191" Canvas.Left="48" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="lstArticles_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Range" DisplayMemberBinding="{Binding Gamme}" />
+                        <GridViewColumn Header="Family" DisplayMemberBinding="{Binding Famille}" />
+
+                        <!-- Nouvelle colonne pour les boutons -->
+                        <GridViewColumn Width="160" Header="Actions">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <!-- Bouton "Modify" -->
+                                        <Button Content="Modify" Width="80" Height="25" Background="#FF814550" Foreground="#FFF6BFB9" Click="btnModify_Click" Cursor="Hand"/>
+
+                                        <!-- Bouton "Delete" -->
+                                        <Button Content="Delete" Width="80" Height="25" Background="#FF814550" Foreground="#FFF6BFB9" Click="btnDelete_Click"  Cursor="Hand"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <Label Name="lblVoir" Content="" Canvas.Left="48" Canvas.Top="592" HorizontalAlignment="Left" VerticalAlignment="Top" Width="785" Height="176"/>
+
+        </Canvas>
+
+    </Grid>
+</Page>
